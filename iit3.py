@@ -8,7 +8,6 @@ class Node:
 # definition for traversal
 def traversal(head):
   currentNode=head
-  print(currentNode.data,end="->")
   while currentNode:
     print(currentNode.data,end="->")
     currentNode=currentNode.next
@@ -45,4 +44,6 @@ node2.next=node3
 node3.next=node4
 node4.next=node5
 
-traversal(node1)
+traversal(node1)          # prints list
+node1 = deleteNode(node1, node3)  # delete 'yash'
+traversal(node1)   

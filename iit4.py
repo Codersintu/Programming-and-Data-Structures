@@ -58,14 +58,64 @@ node3.prev=node2
 node3.next=node4
 
 node4.prev=node3
+node4.next=node5
+node5.prev=node4
 
 # definition for traversal
-def traversal(node4):
-  currentNode=node4
-  print(currentNode.data,end="->")
+def traversal(head):
+  currentNode=head
   while currentNode:
     print(currentNode.data,end="->")
     currentNode=currentNode.next
   print("null")
 
-  traversal(node4)
+
+def reverse_traversal(tail):
+    currentNode = tail
+    while currentNode:
+        print(currentNode.data, end="->")
+        currentNode = currentNode.prev
+    print("null")
+
+# definiton to delete a node
+def deleteNode(head,nodeToDelete):
+#   case:1 if node to be deleted is head node itself
+    if head==nodeToDelete:
+      return head.next
+    # case:2 if node to be deleted is in b/w node
+    
+    currentNode=head
+    while currentNode.next and currentNode.next != nodeToDelete:
+      currentNode=currentNode.next
+
+    currentNode.next=currentNode.next.next
+
+    return head
+
+# definiton to reverse delete a node
+def delete_reverse_Node(tail,nodeToDelete):
+#   case:1 if node to be deleted is head node itself
+    if tail==nodeToDelete:
+       
+      return tail.prev
+    # case:2 if node to be deleted is in b/w node
+    
+    currentNode=tail
+    while currentNode.prev and currentNode.prev != nodeToDelete:
+      currentNode=currentNode.prev
+
+    currentNode.prev=currentNode.prev.prev
+
+    return tail
+
+# Example: start from node5 (tail)
+# reverse_traversal(node5)
+traversal(node1)
+node1=deleteNode(node1,node3)
+node5=delete_reverse_Node(node5,node1)
+traversal(node1)
+
+
+
+
+
