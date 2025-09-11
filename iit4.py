@@ -96,7 +96,7 @@ def deleteNode(head,nodeToDelete):
 def delete_reverse_Node(tail,nodeToDelete):
 #   case:1 if node to be deleted is head node itself
     if tail==nodeToDelete:
-       
+     if tail==None:
       return tail.prev
     # case:2 if node to be deleted is in b/w node
     
