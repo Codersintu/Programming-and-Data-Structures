@@ -38,7 +38,5 @@ nodeC.left=nodeG
 print(root.right.right.data)
 
 
-# Balanced Binary Tree: A binary tree which have of most one different b/w subtree
-# height for each node in the tree
-
+# end class go iit7.py file
 
