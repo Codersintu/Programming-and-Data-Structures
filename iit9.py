@@ -26,6 +26,24 @@ def inorder(root):
             print(root.value,end=" ")
             inorder(root.right)
 
+def traversal(root):
+    if root is not None:
+        traversal(root.left)
+        print(root.data,end=" ")
+        traversal(root.right)
+
+def insert(root,key):
+    if root is None:
+     return Node(key)
+    else:
+        if root.data==key:
+            return root
+        elif key<root.data:
+            root.left=insert(root.left,key)
+        else:
+            root.right=insert(root.right,key)
+    return root
+
 
 root=Node(10)
 root.left=Node(5)

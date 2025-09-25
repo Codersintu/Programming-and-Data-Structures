@@ -35,7 +35,7 @@ print("Top element is:", Day[-1])
 #         self.stack.append(name)
     
 #     def pop(self):
-#         if self.is_empty():
+#         if self.stack.is_empty():
 #             return "stack is empty"
 #         return self.stack.pop()
     

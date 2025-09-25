@@ -25,8 +25,8 @@
 
 
 # slicing with skip value
-# word="amazing"
-# print(word[1:6:2]) 
+word="amazing"
+print(word[1:6:2]) 
 # word= [:7] #word[0:7]
 # word=[0:] # word[0:7] would be length of word
 
