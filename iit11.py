@@ -10,3 +10,6 @@
 # <0-the node is left heavy
 # if BF(x)>1-x is right heavy and unbalanced
 # if BF(x)<-1-x is left heavy and unbalanced
+
+# different case of unbalanced node
+# case-1:left-left case-
