@@ -27,3 +27,55 @@ def print_connections(vertexData, matrix):
 
 print("vertexData",vertexData)
 print_adjacacency_matrix(adjacency_matrix)
+
+
+
+# 09/10/2025
+n=3 #number of vertices
+adj_matrix=[[0]*n for _ in range(n)] # initialize 3*3 matrix with zeros
+
+edges=[(0,1),(1,2),(2,0)]
+for u,v in edges:
+    adj_matrix[u][v] = 1
+    adj_matrix[v][u] =1 #because undirected graph
+
+print("Adjacency Matrix (Undirected Graph)")
+for row in adj_matrix:
+    print(row)
+
+n=3 # number of vertices
+adj_matrix=[[0]*n for _ in range(n)] # initialize 3*3 matrix with zeros
+
+edges=[(0,1),(1,2),(2,0)]
+for u,v in edges:
+    adj_matrix[u][v] = 1 #because directed graph
+
+print("Adjacency Matrix (directed Graph)")
+for row in adj_matrix:
+    print(row)
+
+
+n=3 # number of vertices
+adj_list=[[] for _ in range(n)] # initialize 3*3 matrix with zeros
+
+edges=[(0,1),(1,2),(2,0)]
+for u,v in edges:
+    adj_list[u].append(v) #because directed graph
+    adj_list[v].append(u)
+print("Adjacency list (Undirected Graph)")
+for i in range(n):
+    print(i,"->",adj_list[i])
+
+
+n=3 # number of vertices
+adj_list=[[] for _ in range(n)] # initialize 3*3 matrix with zeros
+
+edges=[(0,1),(1,2),(2,0)]
+for u,v in edges:
+    adj_list[u].append(v) #because directed graph
+    
+print("Adjacency list (Undirected Graph)")
+for i in range(n):
+    print(i,"->",adj_list[i])
+
+
