@@ -13,3 +13,8 @@
 
 # different case of unbalanced node
 # case-1:left-left case-
+
+# Node class delete method
+class Node:
+    def __init__(self):
+        pass
