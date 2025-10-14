@@ -1,3 +1,4 @@
+# 11/09/2025
 # A new Datastructure 
 # Leaf Node-which node has no child is called leaf node
 # child is reflecting of branches 
@@ -38,5 +39,8 @@ nodeC.left=nodeG
 print(root.right.right.data)
 
 
+
+
+# Balanced Binary Tree: A binary tree in which have of most one difference b/w left and right subtree height for every node in the tree
 # end class go iit7.py file
 
