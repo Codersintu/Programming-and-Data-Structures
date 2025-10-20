@@ -6,48 +6,45 @@
 # isEmpty= checks if the stack is empty
 
 # code
-Day=[]
+# Day=[]
 # Push (add elements)
-Day.append("sunday")
-Day.append("monday")
-Day.append("tuesday")
-Day.append("wednesday")
-Day.append("thursday")
-Day.append("friday")
-Day.append("saturday")
-print("day after pushing", Day)
-
-# Pop (remove elements from top)
-top_element = Day.pop()
-print("Popped element:", top_element)
-print("day after popping:", Day)
-
-# Peek (check top element without removing)
-print("Top element is:", Day[-1])
-
+# Day.append("sunday")
+# Day.append("monday")
+# Day.append("tuesday")
+# Day.append("wednesday")
+# Day.append("thursday")
+# Day.append("friday")
+# Day.append("saturday")
+# print("day after pushing", Day)
+# print("size of stack is:", len(Day))
+# print("top element is:", Day[-1])
+# top_element = Day.pop()
+# print("popped element is:", top_element)
 
 # creating stack using class:
-# class Name:
+# class Stack:
 #     def __init__(self):
 #         self.stack=[]
 
-#     def push(self,name):
-#         self.stack.append(name)
-    
+#     def is_empty(self):
+#             return len(self.stack) == 0
+#     def push(self, name):
+#             self.stack.append(name)
+            
 #     def pop(self):
-#         if self.stack.is_empty():
-#             return "stack is empty"
-#         return self.stack.pop()
-    
+#             if self.is_empty():
+#                 return "stack is empty"
+#             return self.stack.pop()
 #     def peek(self):
-#         # return the top item 
-#         if self.is_empty():
-#             return "Stack is empty!"
-#         return self.stack[-1]
+#             if self.is_empty():
+#                 return "stack is empty"
+#             return self.stack[-1]
 
-#     def size(self):
-#         # return number of items in stack
-#         return len(self.stack)
+# mystack=Stack()
+# mystack.push("sintu")
+# mystack.push("rishi")
+# print("stack after pop", mystack.pop())
+# print("top element is:", mystack.peek())
 
 
 
@@ -89,30 +86,34 @@ print("Top element is:", Day[-1])
 
 
 # # creating class of queue
-# class Queue:
-#     def __init__(self):
-#         self.queue=[]
+class Queue:
+    def __init__(self):
+        self.queue=[]
 
-#     def push(self,element):
-#         self.queue.append(element)
+    def push(self,element):
+        self.queue.append(element)
 
-#     def pop(self,element):
-#         if self.isEmpty():
-#             return "queue is empty"
-#         return self.queue.pop(0)
+    def pop(self):
+        if self.isEmpty():
+            return "queue is empty"
+        return self.queue.pop(0)
     
-#     def peek(self):
-#         if self.isEmpty():
-#             return "queue is empty"
-#         return self.queue[0]
+    def peek(self):
+        if self.isEmpty():
+            return "queue is empty"
+        return self.queue[0]
     
-#     def isEmpty(self):
-#         return len(self.queue) == 0
+    def isEmpty(self):
+        return len(self.queue) == 0
     
-#     def size(self):
-#         return len(self.queue)
+    def size(self):
+        return len(self.queue)
 
 
-# myQueue=Queue()
-# myQueue.push("azoo")
-# myQueue.push("halchal")
+myQueue=Queue()
+myQueue.push("azoo")
+myQueue.push("halchal")
+print("Queue elements now:", myQueue.queue)
+print("Element popped:", myQueue.pop())
+print("Front element now:", myQueue.peek())
+print("Queue size:", myQueue.size())

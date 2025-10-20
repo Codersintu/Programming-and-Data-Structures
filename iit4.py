@@ -14,7 +14,7 @@
 #    print("null")
 
 #    def insertNodeAtPosition(head,nodeNew,position):
-# #   case-1:inserting at the begining
+#    case-1:inserting at the begining
 #     if position==1:
 #        nodeNew.next=head
 #        return nodeNew
