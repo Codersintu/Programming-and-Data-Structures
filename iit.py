@@ -17,6 +17,7 @@
 # # create object
 # duck=Duck()
 # duck.walk()
+# duck.swim()
 
 
 # class Grandparent:
