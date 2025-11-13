@@ -47,3 +47,4 @@ node4.next=node5
 traversal(node1)          # prints list
 node1 = deleteNode(node1, node3)  # delete 'yash'
 traversal(node1)   
+
