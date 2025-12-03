@@ -32,18 +32,61 @@
     
 # print(fibonacci(10))
 
-def list_sum(num_list):
-    if len(num_list)==0:
-        return 0
-    else:
-        return num_list[0]+list_sum(num_list[1:])
-print(list_sum([1,2,3,4,5]))
+# def list_sum(num_list):
+#     if len(num_list)==0:
+#         return 0
+#     else:
+#         return num_list[0]+list_sum(num_list[1:])
+# print(list_sum([1,2,3,4,5]))
 
-# reverse a string
-def reverse_string(s):
-    if len(s)==0:
-        return s
-    else:
-        return reverse_string(s[1:])+s[0]
+# # reverse a string
+# def reverse_string(s):
+#     if len(s)==0:
+#         return s
+#     else:
+#         return reverse_string(s[1:])+s[0]
     
-print(reverse_string("hello"))
+# print(reverse_string("hello"))
+
+
+
+# ------------------
+class Parent:
+    def show(self):
+        print("hello parent")
+class Child(Parent):
+    def show(self):
+        print("hello child bahi shaba")
+
+obj=Child()
+obj.show()
+
+
+class Node:
+    def __init__(self,data):
+        self.data=data
+        self.next=None
+head=Node(5)
+print(head.next)
+
+stack = []
+
+stack.append(10)
+
+stack.append(20)
+
+stack.append(30)
+
+print(stack.pop(), stack.pop())
+
+
+class Parent:
+    def __init__(self):
+        print("parent constructor")
+
+class Child(Parent):
+    def __init__(self):
+        super().__init__()
+        print("child constructor")
+
+obj=Child()

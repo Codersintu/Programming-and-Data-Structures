@@ -4,28 +4,23 @@ class Node:
         self.left=None
         self.right=None
 
-def count_nodes(root):
-    if root is None:
-        return (0,0)
+    def count_leaves(self, root):
+        if root is None: return 0
+        if root.left is None and root.right is None:return 1
+        
+        return self.count_leaves(root.left) + self.count_leaves(root.right)
     
-    if root.left is None and root.right is None:
-        return (1,0)
-    
+    def count_non_leaves(self, root):
+        if root is None:return 0
+        if root.left is None and root.right is None:return 0
+        return self.count_non_leaves(root.left) + self.count_non_leaves(root.right)
 
-    left_leaves, left_non_leaves = count_nodes(root.left)
-    right_leaves, right_non_leaves = count_nodes(root.right)
-    
-    total_leaves = left_leaves + right_leaves
-    total_non_leaves = left_non_leaves + right_non_leaves + 1
-    
-    return (total_leaves, total_non_leaves)
+root=Node(1)
+root.left=Node(2)
+root.right=Node(3)
+root.left.left=Node(4)
+root.left.right=Node(5)
+root.right.right=Node(6)
 
-root=Node(10)
-root.left=Node(8)
-root.right=Node(13)
-root.left.left=Node(5)
-root.left.right=Node(6)
-root.right.right=Node(14)
-leaves, non_leaves = count_nodes(root)
-print("Number of Leaf Nodes:", leaves)
-print("Number of Non-Leaf Nodes:", non_leaves)
+print("Leaf count:", root.count_leaves(root))         # expected 3 (nodes 4,5,6)
+print("Non-leaf count:", root.count_non_leaves(root)) # expected 3 (nodes 1,2,3)
